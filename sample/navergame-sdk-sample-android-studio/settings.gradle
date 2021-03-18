@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "nngsdk-sample-android-studio"
