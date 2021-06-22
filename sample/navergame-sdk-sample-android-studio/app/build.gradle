@@ -10,8 +10,8 @@ android {
         applicationId "com.navercorp.nng.android.sample"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 3
-        versionName "1.0.3"
+        versionCode 4
+        versionName "Sample-1.1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -34,7 +34,7 @@ dependencies {
     /**
      * 네이버 게임 SDK와 SDK에서 사용되는 라이브러리들.
      */
-    implementation files("libs/navergame-sdk-gradle-1.0.3.aar")            // Navergame SDK
+    implementation fileTree(dir: 'libs', include: ['navergame-sdk-*.aar','glideadapter-v3.jar']) // Navergame SDK
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.3.72"      // Kotlin
     implementation "androidx.viewpager2:viewpager2:1.0.0"           // Viewpager2
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"   //swiperefreshlayout

@@ -6,10 +6,15 @@ import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.navercorp.nng.android.sdk.NNGCallbackListener;
 import com.navercorp.nng.android.sdk.NNGConfig;
 import com.navercorp.nng.android.sdk.NNGLink;
+
+import org.jetbrains.annotations.NotNull;
 
 /**
  * NAVER Game SDK Android
@@ -35,9 +40,29 @@ public class MainActivity extends Activity {
 
         //sdk 초기화
         NNGLink.initModule(this,LOUNGE_ID, CLIEND_ID, CLIENT_SECRET);
+        NNGLink.setSdkLoadListener(new NNGCallbackListener() {
+            @Override
+            public void onSdkDidLoaded() {
+
+            }
+
+            @Override
+            public void onSdkDidUnloaded() {
+
+            }
+
+            @Override
+            public void onCallInGameMenuCode(@NotNull String inGameMenuCode) {
+                Toast.makeText(MainActivity.this,"onCallInGameMenuCode [" + inGameMenuCode + "]",Toast.LENGTH_LONG).show();
+            }
+        });
+        initListener();
+    }
+
+    private void initListener () {
 
         //sdk 배너 리스트
-        findViewById(R.id.banner_button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.start_home_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NNGLink.startHome(MainActivity.this);
@@ -45,10 +70,38 @@ public class MainActivity extends Activity {
         });
 
         //sdk 점검용배너 리스트
-        findViewById(R.id.sorry_banner_button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.start_sorry_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NNGLink.startSorry(MainActivity.this);
+            }
+        });
+
+        //sdk 글목록 리스트
+        findViewById(R.id.start_board_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText boardIdEdit = findViewById(R.id.boardId_edit);
+                try {
+                    int boardId = Integer.parseInt(boardIdEdit.getText().toString());
+                    NNGLink.startBoard(MainActivity.this, boardId);
+                } catch (Exception e) {
+
+                }
+            }
+        });
+
+        //sdk 글상세
+        findViewById(R.id.start_feed_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    EditText feedIdEdit = findViewById(R.id.feedId_edit);
+                    long feedId = Integer.parseInt(feedIdEdit.getText().toString());
+                    NNGLink.startFeed(MainActivity.this, feedId, false);
+                } catch (Exception e) {
+
+                }
             }
         });
 
