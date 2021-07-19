@@ -52,7 +52,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.3.72"      // Kotlin
     implementation "androidx.viewpager2:viewpager2:1.0.0"           // Viewpager2
     implementation "com.github.bumptech.glide:glide:3.7.0"          // Glide
-    implementation "com.squareup.retrofit2:retrofit:2.6.4"          // Retrofit2
+    implementation "com.squareup.retrofit2:retrofit:2.7.2"          // Retrofit2
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0" //SwipeRefreshLayout
     implementation "com.squareup.retrofit2:converter-gson:2.6.4"
 }
@@ -124,7 +124,7 @@ SDK는 다음과 같은 라이브러리를 사용하고있습니다.
 - Androidx Viewpager2(1.0.0 버전 사용 중)
 - Androidx SwipeRefreshLayout(1.1.0 버전 사용 중)
 - [Glide](http://mvnrepository.com/artifact/com.github.bumptech.glide/glide)(3.7.0 버전 사용 중)
-- [Retrofit2](https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit)(2.6.4 버전 사용 중)
+- [Retrofit2](https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit)(2.7.2 버전 사용 중)
 - hmac(2.3.1 버전 사용중)
 
 &nbsp;
