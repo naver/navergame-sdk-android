@@ -3,15 +3,12 @@ package com.navercorp.nng.android.sample;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.navercorp.nng.android.sdk.NNGCallbackListener;
-import com.navercorp.nng.android.sdk.NNGConfig;
 import com.navercorp.nng.android.sdk.NNGLink;
 
 import org.jetbrains.annotations.NotNull;
@@ -54,6 +51,16 @@ public class MainActivity extends Activity {
             @Override
             public void onCallInGameMenuCode(@NotNull String inGameMenuCode) {
                 Toast.makeText(MainActivity.this,"onCallInGameMenuCode [" + inGameMenuCode + "]",Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onNaverLoggedIn() {
+
+            }
+
+            @Override
+            public void onNaverLoggedOut() {
+
             }
         });
         initListener();
