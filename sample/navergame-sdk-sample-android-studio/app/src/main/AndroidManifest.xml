@@ -10,7 +10,7 @@
         android:supportsRtl="true">
 
         <activity android:name=".MainActivity"
-            android:theme="@style/Theme.NNG_Android"
+            android:theme="@style/Theme.AppCompat.Light"
             android:configChanges="orientation"
             android:screenOrientation="userLandscape">
 

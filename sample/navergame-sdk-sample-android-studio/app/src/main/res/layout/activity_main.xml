@@ -14,7 +14,7 @@
       android:layout_height="70dp"
       android:text="START\nHOME"
       android:textSize="15dp"
-      android:textColor="@color/NNG_BK"
+      android:textColor="@color/black"
       android:textStyle="bold"
 
       android:gravity="center"
@@ -32,7 +32,7 @@
       android:layout_height="70dp"
       android:text="START\nSORRY"
       android:textSize="15dp"
-      android:textColor="@color/NNG_BK"
+      android:textColor="@color/black"
       android:textStyle="bold"
 
       android:gravity="center"
@@ -50,7 +50,7 @@
       android:layout_height="70dp"
       android:text="START\nBOARD"
       android:textSize="15dp"
-      android:textColor="@color/NNG_BK"
+      android:textColor="@color/black"
       android:textStyle="bold"
 
       android:gravity="center"
@@ -68,7 +68,7 @@
       android:layout_height="70dp"
       android:text="START\nFEED"
       android:textSize="15dp"
-      android:textColor="@color/NNG_BK"
+      android:textColor="@color/black"
       android:textStyle="bold"
 
       android:gravity="center"

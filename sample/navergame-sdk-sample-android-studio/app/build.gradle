@@ -8,10 +8,10 @@ android {
 
     defaultConfig {
         applicationId "com.navercorp.nng.android.sample"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 6
-        versionName "Sample-1.1.6"
+        versionName "Sample-1.3.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -34,11 +34,15 @@ dependencies {
     /**
      * 네이버 게임 SDK와 SDK에서 사용되는 라이브러리들.
      */
-    implementation fileTree(dir: 'libs', include: ['navergame-sdk-*.aar','glideadapter-v3.jar']) // Navergame SDK
+    implementation fileTree(dir: 'libs', include: ['navergame-sdk-gradle-with-adapter-*.aar','glideadapter-*.jar','nid-adapter-*.jar']) // Navergame SDK
+
+//    implementation("com.naver.nid:naveridlogin-android-sdk:4.2.6") // for NaverLogin 4.2.6
+    implementation("com.navercorp.nid:oauth:5.1.1") //for NaverLogin 5.1.1
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.3.72"      // Kotlin
     implementation "androidx.viewpager2:viewpager2:1.0.0"           // Viewpager2
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"   //swiperefreshlayout
     implementation "com.github.bumptech.glide:glide:3.7.0"          // Glide
-    implementation "com.squareup.retrofit2:retrofit:2.7.2"          // Retrofit2
-    implementation "com.squareup.retrofit2:converter-gson:2.7.2"
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"          // Retrofit2
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
 }
