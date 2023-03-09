@@ -53,15 +53,6 @@ public class MainActivity extends Activity {
                 Toast.makeText(MainActivity.this,"onCallInGameMenuCode [" + inGameMenuCode + "]",Toast.LENGTH_LONG).show();
             }
 
-            @Override
-            public void onNaverLoggedIn() {
-
-            }
-
-            @Override
-            public void onNaverLoggedOut() {
-
-            }
         });
         initListener();
     }
