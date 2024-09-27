@@ -31,9 +31,9 @@ public class MainActivity extends Activity {
          * NNGLink의 다른 메소드를 호출하기 전에 반드시 초기화를 먼저해야 합니다.
          * 개발자 센터 주소: https://nid.naver.com/devcenter/main.nhn
          */
-        String CLIEND_ID = "UKvNABLDsyEJusJGsXL2";
-        String CLIENT_SECRET = "rK4suc_Qd0";
-        String LOUNGE_ID = "naver_game_4developer";
+        String CLIEND_ID = "GFxrin7Bc4SXqtUy8LcS";//"UKvNABLDsyEJusJGsXL2";
+        String CLIENT_SECRET = "9F_Liyawl6";//"rK4suc_Qd0";
+        String LOUNGE_ID = "StickMan_Idle";//"naver_game_4developer";
 
         //sdk 초기화
         NNGLink.initModule(this,LOUNGE_ID, CLIEND_ID, CLIENT_SECRET);
