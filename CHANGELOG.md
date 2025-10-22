@@ -1,3 +1,8 @@
+v.1.3.8
+-------------
+  targetSDK 35 적용
+
+
 v.1.3.7
 -------------
   https://github.com/google/gson/issues/2069 대응
