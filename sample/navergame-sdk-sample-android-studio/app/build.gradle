@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 35
     buildToolsVersion "34.0.0"
 
     defaultConfig {
         applicationId "com.navercorp.nng.android.sample"
         minSdkVersion 21
-        targetSdkVersion 34
+        targetSdkVersion 35
         versionCode 6
         versionName "Sample-1.3.1"
 
